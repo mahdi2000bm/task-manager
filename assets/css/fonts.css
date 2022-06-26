@@ -53,3 +53,6 @@
     font-display: swap;
     src: url(../fonts/bold.woff2) format('woff2');
 }
+*{
+    font-family: 'iransansX';
+}

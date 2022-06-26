@@ -8,7 +8,6 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<link href="<?= UPATH . "assets/css/fonts.css" ?>" rel="stylesheet">
 <div class="task-manager">
   <div class="left-bar">
     <div class="upper-part">
