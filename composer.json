@@ -1,0 +1,15 @@
+{
+    "name": "mehdi/15-todo-list",
+    "description": "[]\u001b[Dt]\u001b[Do do list]",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mhdibari"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^2.1"
+    }
+}

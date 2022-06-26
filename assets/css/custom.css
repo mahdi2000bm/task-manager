@@ -1,0 +1,74 @@
+.fatalerror {
+    width: 80%;
+    margin: auto;
+    background: #ffb1b1;
+    color: #740505;
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+s a:hover {
+    color: #364ab6;
+}
+
+.del-folder , .del-task {
+    float: right;
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.del-folder:hover, .del-task:hover {
+    opacity: 1;
+}
+
+span.delete-fld-msg {
+    color: #ff5f5f;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input.add-folder {
+    transition: all 0.2s;
+    border: 0;
+    background: transparent;
+    width: 80%;
+    padding: 6px 8px;
+    color: #222;
+    border: 1px solid transparent;
+    font-family: 'DM SANS';
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+a.add-folder-btn svg, a.add-task-btn svg {
+    width: 14px;
+    opacity: 0.8;
+    vertical-align: sub;
+    margin: 0px 4px;
+}
+
+a.add-folder-btn ,a.add-task-btn {
+    vertical-align: sub;
+}
+
+li.add-folder:hover svg, a.add-task-btn:hover svg {
+    opacity: 1;
+}
+input#add-task-input {
+    width: 95%;
+}
+.del-task svg {
+    vertical-align: sub;
+    width: 14px;
+    height: 14px;
+    color: currentcolor;
+    margin-right: 10px;
+}
+.task .label-text , input.add-folder, .task-name {
+    font-family: 'iransansX';
+}
