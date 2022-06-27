@@ -23,7 +23,7 @@
             $response = userRegister($params);
 
             if(!$response){
-                notic('ورود ناموفق!', 'err-msg');
+                notic('! ثبت نام ناموفق', 'err-msg');
             }else{
                 notic('ثبت نام با موفقیت انجام شد :)', 'success-msg');
             }

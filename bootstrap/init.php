@@ -3,7 +3,7 @@
     include DPATH . "bootstrap/helper.php";    
     include DPATH . "bootstrap/config.php";
 
-        $dsn = "mysql:dbname=TodoList;host=localhost;";
+        $dsn = "mysql:dbname=todolist;host=localhost;";
         try {
             $conn = new PDO($dsn, "root", "");
         } catch (PDOException $result_e) {
