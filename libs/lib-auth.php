@@ -1,6 +1,11 @@
 <?php
     function is_logged(){
-        return false;
+        return (isset($_SESSION['currentUser'])) ? true : false;
+    }
+    function currentUser(){
+        if(is_logged()){
+            return $_SESSION['currentUser'] ?? null;
+        }
     }
     function checkUser($email){
         global $conn;
@@ -23,11 +28,15 @@
     function userLogin($email, $pass){
 
         $userStatus = checkUser($email);
-
+        
         if(is_null($userStatus)){
             return false;
         }
         if(password_verify($pass,$userStatus->password)){
+
+            $_SESSION['currentUser'] = $userStatus;
+            $userStatus->gravatar = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $userStatus->email ) ) );
+
             return true;
         }
         return false;

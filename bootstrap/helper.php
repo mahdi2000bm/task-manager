@@ -21,3 +21,6 @@
     function notic($msg, $class = "alert"){
         echo "<div class='modalnotic {$class}'>$msg</div>";
     }
+    function reDirect($uri){
+        header("Location:". base_url($uri));
+    }

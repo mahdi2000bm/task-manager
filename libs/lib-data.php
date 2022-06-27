@@ -1,15 +1,8 @@
 <?php
-    function currentUser(){
-        // id user login
-        $user_data = array(
-            'id'=>1,
-            'name'=>'mahdi'
-        );
-        return $user_data;
-    }
+    $userId = currentUser()->id ?? null;
     function getFolders(){
         global $conn;
-        $userId = currentUser()['id'];
+        global $userId;
         $sql = "SELECT * FROM folders WHERE user_id = $userId";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -25,14 +18,14 @@
     }
     function addFolder($foldername){
         global $conn;
-        $userId = currentUser()['id'];
+        global $userId;        
         $sql = "INSERT INTO folders (folder_name,user_id) VALUES ( :foldername , :userid )";
         $stmt = $conn->prepare($sql);
         $stmt->execute( array(':foldername' => $foldername , ':userid'=> $userId));
     }
     function getTasks($folder_id){
         global $conn;
-        $userId = currentUser()['id'];
+        global $userId;
         $sql = "SELECT * FROM tasks WHERE user_id = $userId && folder_id = $folder_id";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -41,7 +34,7 @@
     }
     function addTask($foldertask,$foldername){
         global $conn;
-        $userId = currentUser()['id'];
+        global $userId;
         $sql = "INSERT INTO tasks (title,user_id,folder_id) VALUES ( :title , :userid, :folder_id )";
         $stmt = $conn->prepare($sql);
         $stmt->execute( array(':title' => $foldertask , ':userid'=> $userId , ':folder_id'=> $foldername ));

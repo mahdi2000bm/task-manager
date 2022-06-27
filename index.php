@@ -3,6 +3,7 @@
     if(!is_logged()){
         header("Location:". base_url('login.php'));
     }
+    $currentUser = currentUser();
     $deleteResult = "";
     if(isset($_GET['delete-folder']) && is_numeric($_GET['delete-folder'])){
         global $deleteResult;

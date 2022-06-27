@@ -74,3 +74,12 @@ input#add-task-input {
 .task .label-text , input.add-folder, .task-name {
     font-family: 'iransansX';
 }
+.userprofile img {
+    border-radius: 50%;
+    width: 60px;
+    margin: 0 10px;
+}
+.displayname span {
+    font-weight: 500;
+    font-size: 14px;
+}

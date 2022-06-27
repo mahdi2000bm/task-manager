@@ -14,8 +14,9 @@
 
             if(!$response){
                 notic('رمز عبور یا ایمیل نامعبتر', 'err-msg');
+                
             }else{
-                notic('ورود با موفقیت انجام شد', 'success-msg');
+                reDirect('index.php');
             }
 
         }else if($actionLogin =='register'){

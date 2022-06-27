@@ -249,14 +249,16 @@ button:focus {
   font-size: 16px;
 }
 .modalnotic.err-msg {
-  background-color: rgb(255, 38, 38);
+  background-color: f74b4a;
   color: #fff;
   font-size: 15px;
-  font-weight: 300;
+  border: 2px solid #f2302f;
+  font-weight: 500;
 }
 .modalnotic.success-msg {
-  background: #03af03;
+  background: #61d215;
   color: #fff;
-  font-size: 15px;
-  font-weight: 300;
+  border: 2px solid #51a915;
+  font-size: 14px;
+  font-weight: 700;
 }
