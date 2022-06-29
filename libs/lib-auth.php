@@ -15,6 +15,7 @@
         $records = $stmt->fetchAll(PDO::FETCH_OBJ);
         return $records[0] ?? null;
     }
+    
     function userRegister($data){
         global $conn;
         $passEncode = password_hash($data['password'] , PASSWORD_BCRYPT);

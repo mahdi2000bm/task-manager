@@ -83,3 +83,7 @@ input#add-task-input {
     font-weight: 500;
     font-size: 14px;
 }
+.user-status {
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,8 +1,12 @@
 <?php
     include "bootstrap/init.php";
+    if(isset($_GET['log-out']) && $_GET['log-out'] == 'true' ){
+        unset($_SESSION['currentUser']);
+    }
     if(!is_logged()){
         header("Location:". base_url('login.php'));
     }
+
     $currentUser = currentUser();
     $deleteResult = "";
     if(isset($_GET['delete-folder']) && is_numeric($_GET['delete-folder'])){

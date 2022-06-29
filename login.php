@@ -9,7 +9,6 @@
         $params = $_POST;
 
         if($actionLogin == 'login'){
-
             $response = userLogin($params['email'], $params['password']);
 
             if(!$response){
@@ -20,14 +19,15 @@
             }
 
         }else if($actionLogin =='register'){
-
-            $response = userRegister($params);
-
-            if(!$response){
-                notic('! ثبت نام ناموفق', 'err-msg');
-            }else{
-                notic('ثبت نام با موفقیت انجام شد :)', 'success-msg');
+            // $response = userRegister($params);
+            if(strlen(strval($params['email'])) < 13 ){
+             notic('ایمیل نامعتبر', 'err-msg'); ;
             }
+            // if(!$response){
+            //     notic('! ثبت نام ناموفق', 'err-msg');
+            // }else{
+            //     notic('ثبت نام با موفقیت انجام شد :)', 'success-msg');
+            // }
         }
     }
     include "tpl/tpl-auth.php";
